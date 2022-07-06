@@ -14,8 +14,8 @@
      shell: |
       echo 'create_main_cluster = false' | sudo tee -a /etc/postgresql-common/createcluster.conf
      args:
-     warn: no
-     
+       warn: no
+
    - name: "Install postgresql 14"
      apt:
        name: 
