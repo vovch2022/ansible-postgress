@@ -1,11 +1,11 @@
-   - name: "Install Python packages"
-     ansible.builtin.pip: 
+- name: "Install Python packages"
+  ansible.builtin.pip: 
       name:
        psycopg2-binary
       state: present
 
-    - name: "Install postgresql 14"
-      apt:
+- name: "Install postgresql 14"
+  apt:
        name: 
         postgresql-14
 
