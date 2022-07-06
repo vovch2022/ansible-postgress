@@ -1,18 +1,18 @@
 ---
-- hosts: postgress
-  become: yes
-  tasks:
-  - name: "Install Python packages"
-    ansible.builtin.pip: 
+ - hosts: postgress
+   become: yes
+   tasks:
+   - name: "Install Python packages"
+     ansible.builtin.pip: 
      name:
       psycopg2-binary
      state: present
 
-  - name: "Install postgresql 14"
-    apt:
-      name: 
-       postgresql-14
+   - name: "Install postgresql 14"
+     apt:
+       name: 
+        postgresql-14
 
-    update_cache: yes
-    otify:
-     - Enable Postgresq
+       update_cache: yes
+       otify:
+        Enable Postgresq
