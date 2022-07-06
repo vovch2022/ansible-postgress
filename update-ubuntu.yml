@@ -15,7 +15,7 @@
       upgrade: dist
       force_apt_get: yes
 
-    - name: Install wget   python3-psycopg2 acl packages
+   - name: Install wget python3-psycopg2 acl packages
      apt:
       name:
        - wget
