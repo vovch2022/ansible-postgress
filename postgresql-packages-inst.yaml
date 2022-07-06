@@ -18,8 +18,8 @@
        update_cache: yes
        install_recommends: no
 
-    - name: "bypass initdb of a main cluster"
-      shell: |
+   - name: "bypass initdb of a main cluster"
+     shell: |
        echo 'create_main_cluster = false' | sudo tee -a /etc/postgresql-common/createcluster.conf
-      args:
-        warn: no
+     args:
+       warn: no
