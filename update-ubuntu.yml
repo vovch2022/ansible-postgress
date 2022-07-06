@@ -15,12 +15,12 @@
       upgrade: dist
       force_apt_get: yes
 
-   - name: Install repo for postgress
+   - name: Install wget
      apt:
       name: wget
       state: present
 
-   - name:
+   - name: Install ca-certificat
      apt:
       name:  ca-certificates
       state: present
