@@ -3,10 +3,10 @@
   become: yes
   tasks:
   - name: "Install Python packages"
-      pip: 
-      name:
-        psycopg2-binary
-      state: present
+    ansible.builtin.pip: 
+     name:
+      psycopg2-binary
+     state: present
 
   - name: Install postgresql 14
     apt:
