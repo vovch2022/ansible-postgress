@@ -15,18 +15,11 @@
       upgrade: dist
       force_apt_get: yes
 
-   - name: Install wget
+    - name: Install wget   python3-psycopg2 acl packages
      apt:
-      name: wget
-      state: present
-
-   - name: Install ca-certificat
-     apt:
-      name:  ca-certificates
-      state: present
-
-   - name: Download  get the certificate, add it to apt-key management utility
-     shell: wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-
-   - name: create a new configuration file with an official PostgreSQL repository address inside
-     shell: sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
+      name:
+       - wget
+       - python3-psycopg2
+       - acl
+       - ca-certificates
+      state: latest
