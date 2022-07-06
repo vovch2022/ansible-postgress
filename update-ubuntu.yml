@@ -21,6 +21,6 @@
       state: present
 
    - name:
-      apt:
-       name:  ca-certificates
-       state: present
+     apt:
+      name:  ca-certificates
+      state: present
