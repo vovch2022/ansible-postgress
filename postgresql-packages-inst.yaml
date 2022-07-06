@@ -1,6 +1,6 @@
 ---
 - name: "Install Python packages"
-  ansible.builtin.pip: 
+  pip: 
       name:
        psycopg2-binary
       state: present
