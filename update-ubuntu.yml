@@ -1,5 +1,5 @@
 ---
-- name: Minicube Playbook
+- name: Postgress on Ubuntu  Playbook
   hosts: postgress
   become: yes
   become_user: root
