@@ -19,6 +19,7 @@
    - name: "Install postgresql 14"
      apt:
        name: 
-        postgresql-14
+        - postgresql-14
+        - postgresql-common
        update_cache: yes
        install_recommends: no
