@@ -16,5 +16,5 @@
         postgresql-14
 
        update_cache: yes
-       otify:
+       notify:
         Enable Postgresq
