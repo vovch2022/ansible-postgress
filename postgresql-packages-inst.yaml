@@ -1,0 +1,26 @@
+---
+- hosts: postgress
+  become: yes
+  vars_files:
+    - var.yml
+
+tasks:
+- name: "Install Python packages"
+      pip: "name={{ item }}  state=present"
+      with_items:
+        - psycopg2-binary
+
+- name: Install postgresql 14
+  apt:
+    name: 
+      postgresql-14
+
+    update_cache: yes
+  notify:
+    - Enable Postgresq
+
+  
+
+    
+
+ 

@@ -1,5 +1,5 @@
 ---
-- name: Postgress on Ubuntu  Playbook
+- name: Postgress on Ubuntu pre-install  Playbook
   hosts: postgress
   become: yes
   become_user: root
