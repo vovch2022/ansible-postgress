@@ -1,12 +1,17 @@
 ---
-- name: "Install Python packages"
-  pip: 
+- name: Install Postgress packages on Ubuntu  Playbook
+  hosts: postgress
+  become: yes
+  become_user: root
+  tasks:
+  - name: "Install Python packages"
+    pip: 
       name:
        psycopg2-binary
       state: present
 
-- name: "Install postgresql 14"
-  apt:
+  - name: "Install postgresql 14"
+    apt:
        name: 
         postgresql-14
 
