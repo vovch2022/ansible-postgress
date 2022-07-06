@@ -1,0 +1,29 @@
+---
+- name: Postgress on Ubuntu  Playbook
+  hosts: postgress
+  become: yes
+  become_user: root
+  tasks:
+   - name: Update apt repo and cache on Ubuntu box
+     apt:
+      update_cache: yes
+      force_apt_get: yes
+      cache_valid_time: 3600
+
+   - name: Upgrade all packages on servers
+     apt:
+      upgrade: dist
+      force_apt_get: yes
+
+   - name: Install wget python3-psycopg2 acl packages
+     apt:
+      name:
+       - wget
+       - python3-psycopg2
+       - acl
+       - ca-certificates
+       - python3-pip
+      state: latest
+
+   - name: Include task list in play
+     include_tasks: postgress-repo.yml
