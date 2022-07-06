@@ -11,7 +11,7 @@
       state: present
 
    - name: "bypass initdb of a main cluster"
-     shell:
+     shell: |
       echo 'create_main_cluster = false' | sudo tee -a /etc/postgresql-common/createcluster.conf
 
    - name: "Install postgresql 14"
