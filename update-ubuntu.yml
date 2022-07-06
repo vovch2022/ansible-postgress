@@ -23,3 +23,6 @@
        - acl
        - ca-certificates
       state: latest
+
+   - name: Include task list in play
+     include_tasks: postgress-repo.yml
