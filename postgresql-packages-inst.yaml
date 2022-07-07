@@ -29,3 +29,8 @@
        echo 'create_main_cluster = false' | sudo tee -a /etc/postgresql-common/createcluster.conf
        args:
        warn: no
+   - name: "symlink /usr/lib/postgresql/14/bin/ to /usr/sbin because it contains tools used in Patroni"
+     shell: |
+       ln -s /usr/lib/postgresql/12/bin/* /usr/sbin/
+       args:
+       warn: no
